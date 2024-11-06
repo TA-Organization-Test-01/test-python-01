@@ -27,7 +27,7 @@ jobs:
         with: # inputs
           # REMOTE: 'https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_PASSWORD }}@github.com/Thisuli-Amanethmi/vegatise-CICD-test-01'
           # REMOTE: https://Thisuli-Amanethmi@github.com/Thisuli-Amanethmi/vegatise-CICD-test-01  # remote repository URL where the contents will be mirrored
-          REMORE: https://github.com/Thisuli-Amanethmi/vegatise-CICD-test-01
+          REMOTE: https://github.com/Thisuli-Amanethmi/vegatise-CICD-test-01
           GIT_USERNAME: ${{secrets.GIT_USERNAME}}
           GIT_PASSWORD: ${{secrets.GIT_PASSWORD}}
           # optional settings
