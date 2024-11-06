@@ -25,9 +25,10 @@ jobs:
       - name: Mirror to Remote Repository
         uses: yesolutions/mirror-action@master
         with: # inputs
-          REMOTE: 'https://Thisuli-Amanethmi@github.com/Thisuli-Amanethmi/vegatise-CICD-test-01'  # remote repository URL where the contents will be mirrored
-          GIT_USERNAME: ${{secrets.GIT_USERNAME}}
-          GIT_PASSWORD: ${{secrets.GIT_PASSWORD}}
+          REMOTE: 'https://username:${{ secrets.GIT_PASSWORD }}@github.com/Thisuli-Amanethmi/vegatise-CICD-test-01'
+          # REMOTE: 'https://Thisuli-Amanethmi@github.com/Thisuli-Amanethmi/vegatise-CICD-test-01'  # remote repository URL where the contents will be mirrored
+          # GIT_USERNAME: ${{secrets.GIT_USERNAME}}
+          # GIT_PASSWORD: ${{secrets.GIT_PASSWORD}}
           # optional settings
           PUSH_ALL_REFS: "false"  # Set to "false" if you only want to push the triggered branch
           GIT_PUSH_ARGS: '--tags --force --prune'  # Customize push arguments if needed
