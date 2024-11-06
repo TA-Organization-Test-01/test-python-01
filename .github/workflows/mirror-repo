@@ -6,7 +6,7 @@ name: Git Actions Mirror Repository - Test 01
 on:
   push:
     branches:
-      - admin-dev 
+      - main
       # this workflow action will trigger on every push of the admin-dev branch
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
       - name: Mirror to Remote Repository
         uses: yesolutions/mirror-action@master
         with: # inputs
-          REMOTE: 'https://github.com/TA-Organization-Test-01/admin-mirror'  # remote repository URL where the contents will be mirrored
+          REMOTE: 'https://github.com/TA-Organization-Test-01/test-python-01-mirror'  # remote repository URL where the contents will be mirrored
           GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
           GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
           # optional settings
