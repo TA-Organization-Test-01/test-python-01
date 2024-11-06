@@ -1,0 +1,40 @@
+name: Git Actions Mirror Repository - Test 01
+
+# https://github.com/marketplace/actions/mirror-repository
+# https://github.com/yesolutions/mirror-action?tab=readme-ov-file#mirror-action
+
+on:
+  push:
+    branches:
+      - admin-dev 
+      # this workflow action will trigger on every push of the admin-dev branch
+
+jobs:
+# mirror - job
+  mirror:
+    runs-on: ubuntu-latest  # environment
+
+    steps:
+    # step 1 - checking the nodejs version
+    #   - name: Set up Node.js 20
+    #     uses: actions/setup-node@v3
+    #     with:
+    #       node-version: '20'
+
+    # step 2 - checking the gitHub repository
+      - name: Check out the repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # fetching all commit history
+
+    # step 3 - 
+      - name: Mirror to Remote Repository
+        uses: yesolutions/mirror-action@master
+        with: # inputs
+          REMOTE: 'https://github.com/TA-Organization-Test-01/admin-mirror'  # remote repository URL where the contents will be mirrored
+          GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
+          GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
+          # optional settings
+          # PUSH_ALL_REFS: "false"  # Set to "false" if you only want to push the triggered branch
+          # GIT_PUSH_ARGS: '--tags --force --prune'  # Customize push arguments if needed
+          # DEBUG: "true"  # Enable debug mode if you need detailed logs
