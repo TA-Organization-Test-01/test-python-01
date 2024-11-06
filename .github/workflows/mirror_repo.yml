@@ -28,7 +28,7 @@ jobs:
           REMOTE: 'https://github.com/TA-Organization-Test-01/test-python-01-mirror'  # remote repository URL where the contents will be mirrored
 
           # GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
-          # GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
+          GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
           # optional settings
           # PUSH_ALL_REFS: "false"  # Set to "false" if you only want to push the triggered branch
           # GIT_PUSH_ARGS: '--tags --force --prune'  # Customize push arguments if needed
