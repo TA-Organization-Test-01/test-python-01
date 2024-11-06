@@ -25,7 +25,7 @@ jobs:
       - name: Mirror to Remote Repository
         uses: yesolutions/mirror-action@master
         with: # inputs
-          REMOTE: 'https://github.com/Thisuli-Amanethmi/vegatise-CICD-test-01'  # remote repository URL where the contents will be mirrored
+          REMOTE: 'https://Thisuli-Amanethmi@github.com/Thisuli-Amanethmi/vegatise-CICD-test-01'  # remote repository URL where the contents will be mirrored
           GIT_USERNAME: ${{secrets.GIT_USERNAME}}
           GIT_PASSWORD: ${{secrets.GIT_PASSWORD}}
           # optional settings
