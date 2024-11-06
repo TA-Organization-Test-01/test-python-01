@@ -17,7 +17,7 @@ jobs:
     steps:
     # step 2 - checking the gitHub repository
       - name: Check out the repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0  # fetching all commit history
 
