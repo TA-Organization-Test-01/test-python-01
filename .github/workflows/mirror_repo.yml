@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - main
-      # this workflow action will trigger on every push of the admin-dev branch
+      # this workflow action will trigger on every push of the test-python-01's main branch
 
 jobs:
 # mirror - job
@@ -26,10 +26,10 @@ jobs:
         uses: yesolutions/mirror-action@master
         with: # inputs
           # REMOTE: 'https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_PASSWORD }}@github.com/Thisuli-Amanethmi/vegatise-CICD-test-01'
-          REMOTE: 'https://Thisuli-Amanethmi@github.com/Thisuli-Amanethmi/vegatise-CICD-test-01'  # remote repository URL where the contents will be mirrored
+          REMOTE: https://Thisuli-Amanethmi@github.com/Thisuli-Amanethmi/vegatise-CICD-test-01  # remote repository URL where the contents will be mirrored
           GIT_USERNAME: ${{secrets.GIT_USERNAME}}
           GIT_PASSWORD: ${{secrets.GIT_PASSWORD}}
           # optional settings
-          PUSH_ALL_REFS: "false"  # Set to "false" if you only want to push the triggered branch
+          PUSH_ALL_REFS: "false"  # "false" - to push the triggered branch only
           GIT_PUSH_ARGS: '--tags --force --prune'  # Customize push arguments if needed
-          DEBUG: "true"  # Enable debug mode if you need detailed logs
+          DEBUG: "true"  # to get detailed logs
